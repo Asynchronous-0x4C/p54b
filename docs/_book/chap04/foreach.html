@@ -1,0 +1,718 @@
+
+<!DOCTYPE HTML>
+<html lang="ja" >
+    <head>
+        <meta charset="UTF-8">
+        <title>for文を拡張 · p54b-2021</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 5.1.0">
+        <meta name="author" content="k-fog">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="class.md" />
+    
+    
+    <link rel="prev" href="arraylist.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="検索ワードを入力" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../chap01/">
+            
+                <a href="../chap01/">
+            
+                    
+                    Chapter01
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../chap01/what_is_p5.html">
+            
+                <a href="../chap01/what_is_p5.html">
+            
+                    
+                    Processingって何？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../chap01/examples.html">
+            
+                <a href="../chap01/examples.html">
+            
+                    
+                    作品例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../chap01/hello_processing.html">
+            
+                <a href="../chap01/hello_processing.html">
+            
+                    
+                    初めに知っておきたい事
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../chap01/basic_shape.html">
+            
+                <a href="../chap01/basic_shape.html">
+            
+                    
+                    図形の描画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../chap01/color.html">
+            
+                <a href="../chap01/color.html">
+            
+                    
+                    色をつける
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../chap01/arithmetic.html">
+            
+                <a href="../chap01/arithmetic.html">
+            
+                    
+                    四則演算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../chap01/variable.html">
+            
+                <a href="../chap01/variable.html">
+            
+                    
+                    変数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../chap01/if.html">
+            
+                <a href="../chap01/if.html">
+            
+                    
+                    条件分岐
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../chap02/">
+            
+                <a href="../chap02/">
+            
+                    
+                    Chapter02
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chap02/examples.html">
+            
+                <a href="../chap02/examples.html">
+            
+                    
+                    作品例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chap02/animation.html">
+            
+                <a href="../chap02/animation.html">
+            
+                    
+                    図形を動かしたい！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chap02/function.html">
+            
+                <a href="../chap02/function.html">
+            
+                    
+                    関数ってなに？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chap02/array.html">
+            
+                <a href="../chap02/array.html">
+            
+                    
+                    配列を使う
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chap02/loop.html">
+            
+                <a href="../chap02/loop.html">
+            
+                    
+                    繰り返し処理をする
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chap02/random.html">
+            
+                <a href="../chap02/random.html">
+            
+                    
+                    ランダムを扱う
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chap02/make_animation.md">
+            
+                <span>
+            
+                    
+                    アニメーションを作る
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../chap03/">
+            
+                <a href="../chap03/">
+            
+                    
+                    Chapter03
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chap03/mouse.html">
+            
+                <a href="../chap03/mouse.html">
+            
+                    
+                    マウスからの入力
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chap03/key.md">
+            
+                <span>
+            
+                    
+                    キーボードで操作する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../chap03/mouse_work.md">
+            
+                <span>
+            
+                    
+                    マウスを使った作品を作る
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../chap03/typewriter.md">
+            
+                <span>
+            
+                    
+                    タイプライター
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Chapter04
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="class.md">
+            
+                <span>
+            
+                    
+                    クラスでオブジェクト指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="primitive_and_data.md">
+            
+                <span>
+            
+                    
+                    プリミティブ型とデータ型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="arraylist.md">
+            
+                <span>
+            
+                    
+                    配列からArrayListへ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.4" data-path="foreach.html">
+            
+                <a href="foreach.html">
+            
+                    
+                    for文を拡張
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="class.md">
+            
+                <span>
+            
+                    
+                    クラスを継承する
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="interface.md">
+            
+                <span>
+            
+                    
+                    インターフェースについて知る
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            HonKitで公開 
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >for文を拡張</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="拡張for文">拡張for文</h1>
+<p>Chapter02でfor文を習ったのを覚えているだろうか。
+<br>実はfor文で配列を扱う場合、さらに簡潔に書くことができる。
+<br>書き方は、</p>
+<pre><code class="lang-java"><span class="hljs-keyword">for</span>([配列の型]　[変数名]:[配列名]){
+  <span class="hljs-comment">//処理</span>
+}
+</code></pre>
+<p>となる。</p>
+<h2 id="配列">配列</h2>
+<p>配列の要素を2倍する例を拡張for文にすると、</p>
+<pre><code class="lang-java"><span class="hljs-type">int</span>[] array={<span class="hljs-number">10</span>,<span class="hljs-number">20</span>,<span class="hljs-number">30</span>,<span class="hljs-number">40</span>,<span class="hljs-number">50</span>};
+<span class="hljs-type">int</span> count=<span class="hljs-number">0</span>;
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i:array){<span class="hljs-comment">//iに要素が順番に代入される</span>
+  array[count]=i*<span class="hljs-number">2</span>;
+  count++;
+}
+
+println(array);<span class="hljs-comment">//{20,40,60,80,100}</span>
+</code></pre>
+<p>というようになる。
+<br>ただ、上の例のようにループした回数が必要になる場合は、普通のfor文を使用する方がよい。
+<br>なので、拡張for文の使いどころとしては、配列の要素を変更しない処理が最適である。</p>
+<h2 id="arraylist">ArrayList</h2>
+<p>実は、先ほど学んだArrayListも拡張for文で書くことができる。</p>
+<pre><code class="lang-java">ArrayList&lt;Float&gt;float_list=<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;Float&gt;();
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;<span class="hljs-number">100</span>;i++){
+  float_list.add(random(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>));<span class="hljs-comment">//ランダムな数値で初期化</span>
+}
+
+<span class="hljs-keyword">for</span>(<span class="hljs-type">float</span> f:float_list){
+  println(f);<span class="hljs-comment">//float_list内のすべての要素を表示</span>
+}
+</code></pre>
+<p>このように、配列の変数の部分をArrayListの変数に変えるだけで拡張for文を使うことができる。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="arraylist.md" class="navigation navigation-prev " aria-label="Previous page: 配列からArrayListへ">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="class.md" class="navigation navigation-next " aria-label="Next page: クラスを継承する">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"for文を拡張","level":"1.5.4","depth":2,"next":{"title":"クラスを継承する","level":"1.5.5","depth":2,"path":"chap04/class.md","ref":"chap04/class.md","articles":[]},"previous":{"title":"配列からArrayListへ","level":"1.5.3","depth":2,"path":"chap04/arraylist.md","ref":"chap04/arraylist.md","articles":[]},"dir":"ltr"},"config":{"plugins":["collapsible-chapters","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-chapters":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"k-fog","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"p54b-2021","language":"ja","gitbook":"*"},"file":{"path":"chap04/foreach.md","mtime":"2023-09-01T13:38:22.286Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2023-09-01T14:18:43.291Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-published-with/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

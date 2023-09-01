@@ -1,4 +1,9 @@
 {
     "title": "p54b-2021",
-    "author": "k-fog"
+    "author": "k-fog",
+    "plugins": [
+        "collapsible-chapters",
+        "hide-published-with"
+    ],
+    "language": "ja"
 }

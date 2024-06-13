@@ -45,4 +45,5 @@ for(float f:float_list){
 }
 ```
 
-このように、配列の変数の部分をArrayListの変数に変えるだけで拡張for文を使うことができる。
+このように、配列の変数の部分をArrayListの変数に変えるだけで拡張for文を使うことができる。<br>
+今回は配列とArrayListの例を紹介したが、他にもHashMapやHashSetなど色々なもので拡張for文が使えるので調べてみてほしい。

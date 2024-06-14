@@ -3,7 +3,7 @@
 <html lang="ja" >
     <head>
         <meta charset="UTF-8">
-        <title>図形の描画 · p54b-2024</title>
+        <title>条件分岐 · p54b-2024</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 5.1.0">
@@ -60,10 +60,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="color.html" />
+    <link rel="next" href="column.html" />
     
     
-    <link rel="prev" href="hello_processing.html" />
+    <link rel="prev" href="variable.html" />
     
 
     </head>
@@ -158,7 +158,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.4" data-path="basic_shape.html">
+        <li class="chapter " data-level="1.2.4" data-path="basic_shape.html">
             
                 <a href="basic_shape.html">
             
@@ -210,7 +210,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="if.html">
+        <li class="chapter active" data-level="1.2.8" data-path="if.html">
             
                 <a href="if.html">
             
@@ -749,7 +749,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >図形の描画</a>
+        <a href=".." >条件分岐</a>
     </h1>
 </div>
 
@@ -764,45 +764,100 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="図形の描画">図形の描画</h1>
-<p><code>セミコロン ; を忘れずに！</code></p>
-<h2 id="線を引く">線を引く</h2>
-<pre><code class="lang-java">line(x1, y1, x2, y2);
+                                <h1 id="if文を使う">if文を使う</h1>
+<h2 id="if文とは">if文とは</h2>
+<p>if文は、英語のif(もし~なら)と同じような意味を持つ、条件によって処理する内容を変えるための構文である。</p>
+<h2 id="使い方">使い方</h2>
+<p>基本的には</p>
+<pre><code class="lang-java"><span class="hljs-keyword">if</span>([条件式]){
+  <span class="hljs-comment">//処理</span>
+}
 </code></pre>
-<ul>
-<li>x1, y1：始点の座標</li>
-<li>x2, x2：終点の座標</li>
-</ul>
-<h2 id="四角を描く">四角を描く</h2>
-<pre><code class="lang-java">rect(x, y, w, h);
+<p>という使い方をする。</p>
+<h2 id="条件式">条件式?</h2>
+<p>上の例でしれっと条件式というものが登場したが、これについて補足をすると、例えばaという変数がbという変数より大きいというように、if文の中の処理を実行する条件のことを指す。
+<br>条件式の種類を下に示す。</p>
+<pre><code class="lang-java">a&gt;b <span class="hljs-comment">//aがbより大きい</span>
+
+a&gt;=b <span class="hljs-comment">//aがbより大きいか等しい</span>
+
+a&lt;b <span class="hljs-comment">//aがbより小さい</span>
+
+a&lt;=b <span class="hljs-comment">//aがbより小さいか等しい</span>
+
+a==b <span class="hljs-comment">//aとbが等しい(==と書くのは=の場合aにbを代入するという処理になるため)</span>
+
+a!=b <span class="hljs-comment">//aとbが等しくない</span>
 </code></pre>
-<ul>
-<li>x：x座標</li>
-<li>y：y座標</li>
-<li>w：横幅</li>
-<li>h：高さ</li>
-</ul>
-<p><img src="../img/chap01/square.png" alt="square"></p>
-<h2 id="円を描く">円を描く</h2>
-<pre><code class="lang-java">ellipse(x, y, w, h);
+<p>条件式を満たすとき、条件式はtrueになり、満たさないときはfalseとなる。
+<br>つまり、a=10、b=20のとき、a&lt;bはtrue、a&gt;bはfalseとなる。
+<br>これで何が言いたいのかというと、if文の条件式の括弧内にある条件式又は変数がtrueであればif文の中の処理が実行されるということだ。
+<br>具体的な例を示すと、</p>
+<pre><code class="lang-java"><span class="hljs-type">boolean</span> b=<span class="hljs-number">10</span>&lt;<span class="hljs-number">20</span>;<span class="hljs-comment">//10&lt;20は条件を満たすので、bはtrueになる</span>
 </code></pre>
-<ul>
-<li>w：x方向（横）の直経</li>
-<li>h：y方向（縦）の直径</li>
-</ul>
-<p><img src="../img/chap01/ellipse.png" alt="ellipse"></p>
-<h2 id="三角形を描く">三角形を描く</h2>
-<pre><code class="lang-java">triangle(x1, y1, x2, y2, x3, y3);
+<p>というようになる。</p>
+<h2 id="条件式を複数繋げる">条件式を複数繋げる</h2>
+<p>条件式は、複数を連結することができる。</p>
+<pre><code class="lang-java">a&amp;&amp;b <span class="hljs-comment">//aとbどちらもtrue</span>
+
+a||b <span class="hljs-comment">//aかbのどちらかまたは両方がtrue</span>
 </code></pre>
-<h3 id="サンプル">サンプル</h3>
-<pre><code class="lang-java">size(<span class="hljs-number">400</span>, <span class="hljs-number">400</span>);
-triangle(<span class="hljs-number">200</span>, <span class="hljs-number">20</span>, <span class="hljs-number">40</span>, <span class="hljs-number">300</span>, <span class="hljs-number">300</span>, <span class="hljs-number">350</span>);
+<h2 id="条件式を否定する">条件式を否定する</h2>
+<p>条件式のtrueとfalseを否定(反転)することもできる。</p>
+<pre><code class="lang-java">!(a==b) <span class="hljs-comment">//a!=bと同じく、aとｂが等しくない</span>
+
+!(a||b) <span class="hljs-comment">//aとbどちらもfalse</span>
 </code></pre>
-<p><img src="../img/chap01/triangle.png" alt="triangle"></p>
-<p>基本はこの４つ。</p>
-<h2 id="補足">補足</h2>
-<p>あとに描いた図形が下の図形を上書きする。</p>
-<p><img src="../img/chap01/some_shape.png" alt="plus_alpha"></p>
+<h2 id="具体例">具体例</h2>
+<pre><code class="lang-java"><span class="hljs-comment">//条件式使用</span>
+<span class="hljs-type">int</span> a=<span class="hljs-number">10</span>;
+<span class="hljs-type">int</span> b=<span class="hljs-number">50</span>;
+<span class="hljs-keyword">if</span>(a&lt;b){
+  println(<span class="hljs-string">&quot;a&lt;b is true\n&quot;</span>);
+}
+
+<span class="hljs-keyword">if</span>(a&gt;b){
+  println(<span class="hljs-string">&quot;a&gt;b is true\n&quot;</span>);
+}
+<span class="hljs-comment">//a&lt;b is trueと表示される</span>
+
+<span class="hljs-comment">//変数使用</span>
+<span class="hljs-type">boolean</span> B=a&lt;b;
+
+<span class="hljs-keyword">if</span>(B){
+  println(<span class="hljs-string">&quot;B is true&quot;</span>);
+}
+<span class="hljs-comment">//B is trueと表示される</span>
+
+<span class="hljs-type">boolean</span> c=<span class="hljs-literal">false</span>;
+
+<span class="hljs-keyword">if</span>(!c){<span class="hljs-comment">//条件式の前に&quot;!&quot;を付けることでtrueとfalseを反転させることができる</span>
+  println(<span class="hljs-string">&quot;c is false&quot;</span>);
+}
+<span class="hljs-comment">//c is falseと表示される</span>
+
+<span class="hljs-keyword">if</span>(a&lt;b&amp;&amp;B){
+  println(<span class="hljs-string">&quot;a&lt;b and B is true&quot;</span>);
+}
+<span class="hljs-comment">//a&lt;b and B is trueと表示される</span>
+</code></pre>
+<h2 id="条件式を満たさない場合の処理">条件式を満たさない場合の処理</h2>
+<p>条件式を満たさない場合の処理は、</p>
+<pre><code class="lang-java"><span class="hljs-keyword">if</span>([条件式]){
+  <span class="hljs-comment">//条件式を満たしたときの処理</span>
+}<span class="hljs-keyword">else</span>{
+  <span class="hljs-comment">//条件式を満たさないときの処理</span>
+}
+</code></pre>
+<p>というように記述できる。
+<br>また、</p>
+<pre><code class="lang-java"><span class="hljs-keyword">if</span>([条件式<span class="hljs-number">1</span>]){
+  <span class="hljs-comment">//処理1</span>
+}<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>([条件式<span class="hljs-number">2</span>]){
+  <span class="hljs-comment">//処理2</span>
+}<span class="hljs-keyword">else</span> ...
+</code></pre>
+<p>と書くことで、条件式1がfalseとなった場合からさらに分岐できる。</p>
 
                                 
                                 </section>
@@ -830,12 +885,12 @@ triangle(<span class="hljs-number">200</span>, <span class="hljs-number">20</spa
 
             
                 
-                <a href="hello_processing.html" class="navigation navigation-prev " aria-label="Previous page: 初めに知っておきたい事">
+                <a href="variable.html" class="navigation navigation-prev " aria-label="Previous page: 変数">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="color.html" class="navigation navigation-next " aria-label="Next page: 色をつける">
+                <a href="column.html" class="navigation navigation-next " aria-label="Next page: プログラミング学習法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -846,7 +901,7 @@ triangle(<span class="hljs-number">200</span>, <span class="hljs-number">20</spa
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"図形の描画","level":"1.2.4","depth":2,"next":{"title":"色をつける","level":"1.2.5","depth":2,"path":"chap01/color.md","ref":"chap01/color.md","articles":[]},"previous":{"title":"初めに知っておきたい事","level":"1.2.3","depth":2,"path":"chap01/hello_processing.md","ref":"chap01/hello_processing.md","articles":[]},"dir":"ltr"},"config":{"plugins":["collapsible-chapters","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-chapters":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"k-fog,async0x4c","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"p54b-2024","language":"ja","gitbook":"*"},"file":{"path":"chap01/basic_shape.md","mtime":"2022-07-14T06:11:34.000Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-06-14T14:25:31.386Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"条件分岐","level":"1.2.8","depth":2,"next":{"title":"プログラミング学習法","level":"1.2.9","depth":2,"path":"chap01/column.md","ref":"chap01/column.md","articles":[]},"previous":{"title":"変数","level":"1.2.7","depth":2,"path":"chap01/variable.md","ref":"chap01/variable.md","articles":[]},"dir":"ltr"},"config":{"plugins":["collapsible-chapters","hide-published-with"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"collapsible-chapters":{},"hide-published-with":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"k-fog,async0x4c","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"p54b-2024","language":"ja","gitbook":"*"},"file":{"path":"chap01/if.md","mtime":"2024-03-28T05:43:18.000Z","type":"markdown"},"gitbook":{"version":"5.1.0","time":"2024-06-14T14:25:31.386Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

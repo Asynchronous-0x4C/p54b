@@ -11,6 +11,10 @@
     "license": "ISC",
     "devDependencies": {
         "gh-pages": "^3.2.3",
-        "honkit": "^3.7.5"
+        "honkit": "^5.1.0"
+    },
+    "dependencies": {
+        "gitbook-plugin-collapsible-chapters": "^0.1.8",
+        "gitbook-plugin-hide-published-with": "^0.0.1"
     }
 }
